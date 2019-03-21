@@ -1,6 +1,6 @@
 <h1>Battle!</h1>
-<div><%= @player1 %> Vs <%= @player2 %></div>
-<div><%= @player2 %>: <%= @p2hp %> HP</div>
+<div><%= @game.player1.name %> Vs <%= @game.player2.name %></div>
+<div><%= @game.player2.name %>: <%= @game.player2.hp %> HP</div>
 <div>
-  <a href='/attack_p2' id="Attack Player 2">Attack <%= @player2 %></a>
+  <a href='/attack_p2' id="Attack Player 2">Attack <%= @game.player2.name %></a>
 </div>
