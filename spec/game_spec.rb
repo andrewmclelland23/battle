@@ -30,5 +30,11 @@ describe Game do
       game.switch_turn
       expect(game.turn).to eq player2
     end
+
+    describe '#inactive_player' do
+      it 'shows the player not currently playing' do
+        expect(game.inactive_player).to eq player2
+      end
+    end
   end
 end
