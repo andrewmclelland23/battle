@@ -1,0 +1,4 @@
+<h1><%= @game.turn.name %> attacks <%= @game.inactive_player.name %>!</h1>
+<div><%= @game.inactive_player.name %>: <%= @game.inactive_player.hp %> HP</div>
+
+<a href="/switch_turn" id="OK">OK</a>

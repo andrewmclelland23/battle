@@ -18,4 +18,17 @@ describe Game do
   it 'should initialize with second argument set to p2' do
     expect(game.player2).to eq player2
   end
+
+  describe '#current_turn' do
+    it 'starts as player 1' do
+      expect(game.turn).to eq player1
+    end
+  end
+
+  describe '#switch_turn' do
+    it 'switches the turn' do
+      game.switch_turn
+      expect(game.turn).to eq player2
+    end
+  end
 end

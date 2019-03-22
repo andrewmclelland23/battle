@@ -1,6 +1,10 @@
 <h1>Battle!</h1>
 <div><%= @game.player1.name %> Vs <%= @game.player2.name %></div>
+<div><%= @game.player1.name %>: <%= @game.player1.hp %> HP</div>
 <div><%= @game.player2.name %>: <%= @game.player2.hp %> HP</div>
+
+  <div>Current Player: <%= @game.turn.name %></div>
+
 <div>
-  <a href='/attack_p2' id="Attack Player 2">Attack <%= @game.player2.name %></a>
+  <a href='/attack' id="Attack">Attack <%= @game.inactive_player.name %></a>
 </div>

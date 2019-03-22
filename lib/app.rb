@@ -1,7 +1,7 @@
 # battle.rb
 require 'sinatra/base'
-require 'player'
-require 'game'
+require_relative 'player'
+require_relative 'game'
 
 class Battle < Sinatra::Base
 
@@ -21,9 +21,13 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
-  get '/attack_p2'do
+  get '/attack'do
     @game = $game
-    @game.attack(@game.player2)
-    erb(:attack_p2)
+    @game.attack(@game.inactive_player)
+    erb(:attack)
+  end
+  get '/switch_turn' do
+    $game.switch_turn
+    redirect('/play')
   end
 end
